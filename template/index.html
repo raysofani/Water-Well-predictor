@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Water Quality Assessment</title>
+    <style>
+        /* Styles as shown previously */
+    </style>
+</head>
+<body>
+    <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='style.css')}}">
+    <html class="container">
+        <div class="water">
+            <img src="static/g20.jpg" alt="well">
+        <h1 id="head">Water Quality Assessment</h1>
+        </div>
+        <form id="waterQualityForm" action="/predict" method="POST">
+        <br>
+         <div class="content">
+          <div class="block">
+            <div class="box1">
+              <div>
+
+               </li><label for="x">X Coordinate:</label>
+               <br>
+               <input type="decimal" id="x" name="x" required>
+
+             </div>
+             <br>
+             <div>
+               <label for="y">Y Coordinate:</label><br>
+               <input type="decimal" id="y" name="y" required>
+             </div>
+             <br>
+               <div>
+                <label for="ph">pH:</label><br>
+                <input type="number" id="ph" name="ph" required>
+             </div>
+             <br>
+             <div>
+               <label for="hco3">HCO3:</label><br>
+               <input type="number" id="hco3" name="hco3" required>
+             </div>
+             <br>
+             <div>
+               <label for="cl">Cl:</label><br>
+               <input type="number"  id="cl" name="cl" required>
+             </div>
+             <br>
+             <div>
+               <label for="so4">SO4:</label><br>
+               <input type="number"  id="so4" name="so4" required>
+             </div>
+             <br>
+             <div>
+               <label for="no3">NO3:</label><br>
+               <input type="number" id="no3" name="no3" required>
+             </div>
+            </div>
+             <br>
+             <div class="box2">
+              <div>
+                <label for="totalHardness">Total Hardness:</label><br>
+                <input type="number"  id="totalHardness" name="totalHardness" required>
+             </div>
+             <br>
+             <div>
+                 <label for="ca">Ca:</label><br>
+                 <input type="number"  id="ca" name="ca" required>
+             </div>
+             <br>
+             <div>
+                 <label for="mg">Mg:</label><br>
+                 <input type="number"  id="mg" name="mg" required>
+             </div>
+             <br>
+             <div>
+                <label for="na">Na:</label>
+                <br>
+                 <input type="number"  id="na" name="na" required>
+             </div>
+             <br>
+             <div>
+              <label for="k">K:</label><br>
+              <input type="number"  id="k" name="k" required>
+             </div>
+             <br>
+             <div>
+              <label for="f">F:</label>
+              <br>
+              <input type="number"  id="f" name="f" required>
+             </div>
+             <br>
+             <div>
+                <label for="sio2">SiO2:</label>
+                <br>
+                <input type="number" id="sio2" name="sio2" required>
+             </div>
+            </div>
+
+             <br>
+
+
+              <div class="space"></div>
+
+
+              <div class="result" id="result">
+                   {{result}}
+              </div>
+
+               <div class="Box3" alt="Snow" style="width:100%;">
+                <!-- change this image and adjust hight and width -->
+                <img class="text" src="static/WhatsApp Image 2023-09-22 at 12.53.11 AM.jpg" alt="well">
+
+                    <h1 id="bet"> About This Project</h1>
+                    <p id="up">   The web-based system is expected to help common users in <br>making decisions regarding water well in a particular location. <br>
+                    The system will be driven by NAQUIM data of CGWB like <br> lithology, geophysical logs, water levels, water quality, aquifer <br> maps, etc.
+                     On a user-selected point the AI-based predictor <br> should be able to provide the following information: <br>
+                     i. Whether the area is suitable for water well construction <br> or not? <br>
+                     ii. At what depth water-bearing zones are expected to be <br> encountered; <br>
+                     iii. What is the expected discharge of the well; <br>
+                     iv. what is the most suitable drilling technique in the area; <br>
+                      v. What is the expected quality of groundwater in the area and <br> other relevant information? <br>There should be a user-friendly graphical user interface. <br> Provisions should also be there to obtain the user feedback in a <br> structured manner.
+
+                </p>
+            </div>
+              </div>
+              </div>
+              <div class="submit">
+                <br>
+                <button type="submit">Submit</button>
+                 </div>
+        </form>
+               <footer>
+                <div>
+                @copyright reserved <br>
+               contact- +91 876797635 <br>
+               </div>
+               <p id="12">waterwell@gmail.com</p>
+
+               </footer>
+
+    <script src="script.js">
+
+    </script>
+
+< /body>
+    </html>
